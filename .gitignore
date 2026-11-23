@@ -1,0 +1,18 @@
+# Build output
+build/
+.build/
+*.o
+*.dSYM/
+
+# Editor / tooling
+xcuserdata/
+*.xcodeproj/xcuserdata/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+
+# Local scratch
+*.log

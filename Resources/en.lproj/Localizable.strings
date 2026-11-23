@@ -1,0 +1,15 @@
+/* display++ — English (development language)
+ *
+ * Identity mapping on purpose: an untranslated key already reads as English, but
+ * shipping the English resources explicitly keeps `zh-Hans` from silently
+ * becoming the fallback when it is the only language present in the bundle.
+ */
+
+/* HiDPI availability */
+"No 2x twin" = "无 2x 配对";
+"No 2x twin at %@. This panel can switch at %@." = "该尺寸（%@）没有 2x 配对。这块面板能切 HiDPI 的尺寸：%@。";
+"This panel offers no HiDPI mode at any size." = "这块面板在任何尺寸下都没有 HiDPI 模式。";
+
+/* HiDPI is a sharpness switch, not a resolution change */
+"Sharper (2x)" = "更清晰 (2x)";
+"On" = "已开启";

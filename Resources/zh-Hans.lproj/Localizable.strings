@@ -1,0 +1,174 @@
+/* display++ — Simplified Chinese (zh-Hans)
+ *
+ * Keys are the English source strings. Terminology follows the macOS
+ * Simplified Chinese UI (显示器 / 分辨率 / 刷新率 / 亮度), so the app reads like a
+ * system component rather than a translated one.
+ */
+
+/* Device section */
+"Brightness" = "亮度";
+"Brightness (DDC)" = "亮度（DDC）";
+"Brightness (Software)" = "亮度（软件）";
+"Resolution" = "分辨率";
+"This display does not accept that resolution." = "这台显示器不接受该分辨率。";
+"Switching — the screen blanks while the display resyncs." = "正在切换 —— 显示器重新同步期间屏幕会短暂变黑。";
+"Display Mode" = "显示模式";
+"Refresh Rate" = "刷新率";
+"Screen Rotation" = "屏幕旋转";
+"Move Display" = "移动显示器";
+"Image Adjustments" = "图像调整";
+"Configuration Protection" = "配置保护";
+"High Resolution (HiDPI)" = "高分辨率 (HiDPI)";
+"Set as Main Display" = "设为主显示器";
+
+/* Device control state */
+"DDC Hardware Control" = "DDC 硬件控制";
+"DDC Unavailable" = "DDC 不可用";
+"no DDC" = "无 DDC";
+"Computer-side dimming — the display backlight is unchanged, so dark areas lose detail." = "电脑侧调光 —— 这条链路不透传 DDC/CI，面板背光不变，暗部会丢失细节。";
+
+/* Header */
+"Let the brightness keys control this display" = "让亮度键控制这台显示器";
+"Switch" = "开关";
+
+/* Tools */
+"Tools" = "工具";
+"Redetect Displays" = "重新检测显示器";
+"Re-probe DDC · %@" = "重新探测 DDC · %@";
+"Quit display++" = "退出 display++";
+"Settings" = "设置";
+"Show or hide Tools" = "显示或隐藏工具";
+"Settings…" = "设置…";
+"Brightness: %d%%" = "亮度：%d%%";
+
+/* Settings window */
+"Version %@ — menu bar display control" = "版本 %@ — 菜单栏显示控制";
+"Displays" = "显示器";
+"native" = "原生";
+"Accessibility granted — brightness keys are intercepted." = "已获得辅助功能权限 —— 亮度键由本应用接管。";
+"No Accessibility permission — the brightness keys still control the built-in display only." = "未获得辅助功能权限 —— 亮度键目前只能控制内建显示器。";
+"Independent implementation built on the macOS display stack. No code from any other display utility is included." = "基于 macOS 显示栈的独立实现，未包含任何其他显示工具的代码。";
+
+/* App menu */
+"Configure Device Control…" = "配置设备控制…";
+"Volume" = "音量";
+"Volume (Hardware)" = "音量（硬件）";
+"Volume (%@)" = "音量（%@）";
+"Volume (Unavailable)" = "音量（不可用）";
+"Muted" = "已静音";
+"Color Mode" = "色彩模式";
+"Mirror Display" = "屏幕镜像";
+"Stream Display" = "屏幕串流";
+"Picture in Picture" = "画中画";
+"Arrange Displays" = "排列显示器";
+"Device Control" = "设备控制";
+"Input Source" = "输入源";
+"Color Profile" = "颜色描述文件";
+"Manage Display" = "管理显示器";
+"High Resolution (HiDPI)" = "高分辨率 (HiDPI)";
+"Set as Main Display" = "设为主显示屏";
+"Expand" = "展开";
+"Collapse" = "收起";
+"Displays and Virtual Screens" = "显示器和虚拟屏幕";
+"System Colors" = "系统颜色";
+"display++ 1.0" = "display++ 1.0";
+
+/* Submenus */
+"Don't Mirror" = "不镜像";
+"Mirror of %@" = "镜像到 %@";
+"Moves this display 20 pt. The window server keeps the layout from overlapping." = "每次移动 20 点；窗口服务器会保证排列不重叠。";
+"Open System Display Arrangement…" = "打开系统显示器排列…";
+"Open Display Settings…" = "打开显示器设置…";
+"Contrast (DDC)" = "对比度（DDC）";
+"Contrast needs DDC/CI. This display does not answer on its I2C bus." = "对比度需要 DDC/CI，而这台显示器在 I2C 总线上不应答。";
+"Re-probe DDC" = "重新探测 DDC";
+"Built-in display has no DDC bus" = "内建屏没有 DDC 总线";
+"Disconnect" = "断开";
+"Connect" = "连接";
+"This display did not answer the input-source query (VCP 0x60)." = "这台显示器没有回应输入源查询（VCP 0x60）。";
+"The window server refused the mirror change." = "窗口服务器拒绝了这次镜像更改。";
+"The window server refused the connection change." = "窗口服务器拒绝了这次连接更改。";
+"This display did not acknowledge the input source change." = "这台显示器没有确认输入源切换。";
+"Disconnecting this display is not available: it is the built-in panel." = "内建屏不能断开。";
+"Connect or disconnect this display" = "连接或断开这台显示器";
+"Brightness keys control this display" = "亮度键控制这台显示器";
+
+/* Why a row has nothing behind it */
+"Color mode switching needs DDC/CI (VCP 0x08) and this display does not answer on its bus." = "色彩模式切换需要 DDC/CI（VCP 0x08），而这台显示器在总线上不应答。";
+"Streaming needs a capture pipeline (ScreenCaptureKit plus a Metal compositor). Not in this build — the physical display keeps driving itself for now." = "串流需要捕获管线（ScreenCaptureKit + Metal 合成器）。这一版还没有 —— 目前物理显示器仍由自己驱动。";
+"Picture in picture is the stream pipeline with a second window. It lands with streaming, not before it." = "画中画就是串流管线加一个窗口，和串流一起到位，不会更早。";
+"Color profile switching goes through ColorSync, which needs the display's UUID. This build reads the profile but does not write one yet." = "颜色描述文件切换要经 ColorSync 写入显示器 UUID，这一版只读不写。";
+"Configuration protection locks the current mode and layout against outside changes. The display layer can snapshot a configuration; the lock is not wired yet." = "配置保护会把当前模式与排列锁定。显示层已经能快照一份配置，锁定还没接上。";
+"Rotation is reported but not driven: there is no public setter, and the private SkyLight entry points this system exports do not include one." = "旋转角度只读取不写入：没有公开 setter，本机 SkyLight 导出的私有入口里也没有旋转接口。";
+
+/* Device control explanations */
+"Brightness uses the system's own panel control (DisplayServices)." = "亮度走系统自己的面板控制（DisplayServices）。";
+"Brightness uses DDC/CI on the display's I2C bus (VCP 0x10)." = "亮度走显示器 I2C 总线上的 DDC/CI（VCP 0x10）。";
+"Brightness falls back to a gamma-table dim: the backlight stays where it is and dark detail is lost." = "亮度回退为 gamma 表调光：背光不变，暗部细节会丢失。";
+"Volume uses the display's own speaker control (VCP 0x62)." = "音量走显示器自己的扬声器控制（VCP 0x62）。";
+"Volume drives the audio device “%@”." = "音量驱动音频设备「%@」。";
+"No volume backend is available for this display." = "这台显示器没有可用的音量后端。";
+
+/* Settings window — sidebar and panes */
+"Display Groups" = "显示组";
+"Apps" = "应用程序";
+"Menu" = "菜单";
+"Keyboard" = "键盘";
+"Pro" = "专业版";
+"About" = "关于";
+"Show help" = "显示帮助";
+"App Menu" = "应用程序菜单";
+"Guide" = "指南";
+"Overview" = "概览";
+"Show currently detached (previously disconnected) displays" = "在“设置 > 显示器”中显示当前脱机（过去已断开）显示器";
+"Lists every display this app has seen before, so its settings can be edited while it is offline." = "列出本应用见过的所有显示器，脱机时也能修改部分配置。";
+"Advanced display settings" = "高级显示设置";
+"EDID overrides and custom timing are not implemented in this build." = "EDID 覆盖与自定义时序尚未在本版本实现。";
+"Advanced…" = "高级…";
+"Virtual screens" = "虚拟屏幕";
+"Virtual screens behave like real displays but live in memory. They can be mirrored, streamed or captured." = "虚拟屏幕与真实显示器类似，但只存在于内存中。它可以被镜像、串流或捕获。";
+"New Virtual Screen…" = "新建虚拟屏幕…";
+"Advanced virtual screen settings" = "高级虚拟屏幕设置";
+"Resolution, HiDPI scale and rotation of the virtual screen's framebuffer." = "虚拟屏幕帧缓冲的分辨率、HiDPI 缩放与旋转。";
+"Enable connect and disconnect options for displays" = "为显示器启用连接与断开选项";
+"Adds the connect switch to each display's header and a Disconnect row to its menu. Disconnecting puts the display to sleep and removes it from the layout." = "在每块显示器的标题栏加上连接开关、菜单里加上断开行。断开会让显示器进入睡眠并从布局中移除。";
+"Software XDR/HDR brightness boost and dimming" = "软件 XDR/HDR 亮度提升和调光";
+"Uses color table adjustments to push brightness past the panel's backlight. Off by default: it is a tone-map change, not more light." = "用色彩表调整把亮度推到面板背光之上。默认关闭：那是色调映射，不是真的更亮。";
+"Allow color table adjustments" = "允许色表调整（兼容模式下需要关闭此选项）";
+"Color table control applies colour-related image adjustments and software XDR efficiently. Overlays are used when it is unavailable." = "色表调整可高效应用颜色相关的图像调整与软件 XDR；不可用时改用叠加层。";
+"Allow color table adjustments with custom color profiles" = "当显示器使用自定义颜色描述文件时允许色表调整";
+"A custom color profile plus color table control can produce a black screen. With this off, color table control is disabled whenever any display uses one." = "自定义颜色描述文件叠加色表调整可能导致黑屏。关闭此项后，只要有显示器使用自定义描述文件，色表调整就整体禁用。";
+"Mode %@ at %.0f Hz" = "模式 %@ @ %.0f Hz";
+"Change…" = "更改…";
+"Switches to the HiDPI twin of the current size: same layout, twice the pixels, no output timing change." = "切到当前尺寸的 HiDPI 配对模式：布局不变、像素翻倍、输出时序不变。";
+"Moves the menu bar to this display by translating the whole arrangement so it sits at the origin." = "把整个排列平移到该显示器落在原点，从而把菜单栏移过来。";
+"The built-in panel cannot be disconnected." = "内建屏不能断开。";
+"Currently %@" = "当前 %@";
+"Re-query" = "重新查询";
+"No groups yet. The display layer can mirror and arrange displays; group synchronisation is the next layer on top of it." = "还没有显示组。显示层已经能镜像与排列；组同步是叠在它上面的一层。";
+"Nothing configured. App rules need the display layer's mode API, which exists; the rule editor does not." = "尚未配置。应用规则所需的显示层接口已经存在，规则编辑器还没有。";
+"Choose what the app menu and its display rows contain." = "选择应用程序菜单及其显示器行里包含哪些内容。";
+"Use native brightness keys for brightness control" = "使用原生亮度键进行亮度控制";
+"Lets the app consume the Apple brightness keys so they can drive external displays, XDR boost and extra dimming as well." = "让本应用接管 Apple 亮度键，从而也能控制外接显示器亮度、XDR 提升与额外调光。";
+"Accessibility is granted — the key tap is installed." = "已获得辅助功能权限 —— 键盘事件监听已安装。";
+"Accessibility is not granted — the keys keep their system behaviour." = "未获得辅助功能权限 —— 这些键仍走系统行为。";
+"Open Privacy…" = "打开隐私设置…";
+"Listen for native volume keys" = "监听原生音量键";
+"Uses the Apple audio keys to drive the selected display's volume instead of the current output device." = "让 Apple 音量键控制所选显示器的音量，而不是当前输出设备。";
+"On-screen display for adjustments" = "调整时显示浮窗 (OSD)";
+"Shows the OSD while changing brightness, volume or mute with the keyboard." = "用键盘调整亮度、音量或静音时显示浮窗。";
+"display++ is free software under the MIT licence. There are no tiers, no trial and no feature flags." = "display++ 是 MIT 许可的自由软件，没有授权层级、试用期或功能开关。";
+"display++" = "display++";
+"Method" = "方法";
+"Re-detect Displays" = "重新检测显示器";
+"Expand" = "展开";
+"Collapse" = "收起";
+
+/* HiDPI availability */
+"No 2x twin" = "无 2x 配对";
+"No 2x twin at %@. This panel can switch at %@." = "该尺寸（%@）没有 2x 配对。这块面板能切 HiDPI 的尺寸：%@。";
+"This panel offers no HiDPI mode at any size." = "这块面板在任何尺寸下都没有 HiDPI 模式。";
+
+/* HiDPI is a sharpness switch, not a resolution change */
+"Sharper (2x)" = "更清晰 (2x)";
+"On" = "已开启";
