@@ -53,8 +53,6 @@ open "build/display++.app"
 bundle. It takes about half a minute from clean. There is no Dock icon
 (`LSUIElement`); the app lives in the menu bar.
 
-![build](https://img.shields.io/badge/status-ad--hoc%20signed-yellow)
-
 ## Features
 
 | Capability | State | How |
